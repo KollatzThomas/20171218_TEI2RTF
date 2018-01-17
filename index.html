@@ -69,7 +69,8 @@
                 <h2 class="red up-25">via TUSCRIPT &amp; #*export</h2>
                 <h4 class="red">W<a href="https://www.youtube.com/watch?v=dpWmlRNfLck"
                         ><del>ar</del></a>|ord what is it good for – absolutely nothing!?</h4>
-                <p class="centered x-small">☞ <span class="highlight">extended version 3to7</span></p>
+                <p class="centered x-small">☞ <span class="highlight">extended version
+                    3to7</span></p>
                 <h5>
                     <strong><a href="#">Thomas Kollatz</a></strong> | <img
                         src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
@@ -92,34 +93,31 @@
                                  /></a></div>
                         <p class="x-small"><a href="data/1914-07-27_Jacoba_vanHeemskerck.xml">TEI
                                 XML</a></p></div>
-                        <div class="four columns">
-                            <p class="x-small "> Metadaten <code>&lt;TeiHeader&gt;</code>
-                                <br />Anrede <code>&lt;opener&gt;</code>
-                                <br />opener <code>&lt;opener&gt;</code>
-                                <br />closer <code>&lt;closer&gt;</code>
-                                <br />Briefkorpus <br />PS <code>&lt;postscriptum&gt;</code>
-                                <br />Fussnoten <code>&lt;note&gt;</code>
-                                <br />Register: <br />Personen <code>&lt;persName&gt;</code>
-                                <br />Orte <code>&lt;placeName&gt;</code>
-                                <br />Werke <code>&lt;term&gt;</code></p>
-                            <p class="x-small">TEI – Struktur und Semantik</p></div>
-                    
+                    <div class="four columns">
+                        <p class="x-small "> Metadaten <code>&lt;TeiHeader&gt;</code>
+                            <br />Anrede <code>&lt;opener&gt;</code>
+                            <br />opener <code>&lt;opener&gt;</code>
+                            <br />closer <code>&lt;closer&gt;</code>
+                            <br />Briefkorpus <br />PS <code>&lt;postscriptum&gt;</code>
+                            <br />Fussnoten <code>&lt;note&gt;</code>
+                            <br />Register: <br />Personen <code>&lt;persName&gt;</code>
+                            <br />Orte <code>&lt;placeName&gt;</code>
+                            <br />Werke <code>&lt;term&gt;</code></p>
+                        <p class="x-small">TEI – Struktur und Semantik</p></div>
                     <div class="four columns">
                         <div class="mfp-lightbox">
                             <a href="resources/img/mockup.jpg">
                                 <img src="resources/img/mockup.jpg" style="width:25rem" /></a>
                         </div><p class="x-small">Planskizze</p>
-                        
                     </div></div></div>
             <div class="step">
                 <h2 class="red">$tei2rtf</h2>
                 <blockquote class="line-height-one-five medium">
-                    <strong>109 XML-Dateien</strong> werden aus zwei Verzeichnissen in
-                    <strong>eine TUSTEP-Datei</strong> geschrieben; Orts- und
-                    Personennamen sowie Werke werden für <strong>Register</strong>
-                    vorbereitet; Daten werden beim Lesen der XML-Dateien entsprechend
-                    der Layoutvorgaben aufbereitet in eine <strong>TUSTEP-Datei</strong>
-                    geschrieben </blockquote>
+                    <strong>109 XML-Dateien</strong> werden aus zwei Verzeichnissen in <strong>eine
+                        TUSTEP-Datei</strong> geschrieben; Orts- und Personennamen sowie Werke
+                    werden für <strong>Register</strong> vorbereitet; Daten werden beim Lesen der
+                    XML-Dateien entsprechend der Layoutvorgaben aufbereitet in eine
+                        <strong>TUSTEP-Datei</strong> geschrieben </blockquote>
                 <pre><code>#*export,sturm.tf,sturm.rtf,definitionen=sturm.sty,loeschen=+,anzeigen=+</code></pre>
                 <div class="row down-50">
                     <div class="four columns">
@@ -129,22 +127,15 @@
                         </div>
                         <p class="x-small">Definitionen <code>sturm.sty</code></p>
                     </div>
-                        
-                       
-                
-                    
-                
                     <div class="eight columns">
                         <div class="row centered">
-                                <video controls="controls" style="margin-left:0" width="680"
-                                    height="480">
-                                    <source src="resources/img/sturm.mp4" type="video/mp4"></source>
-                                </video><p class="x-small up-50">$tei2rtf – the movie</p>
+                            <video controls="controls" style="margin-left:0" width="680"
+                                height="480">
+                                <source src="resources/img/sturm.mp4" type="video/mp4"></source>
+                            </video><p class="x-small up-50">$tei2rtf – the movie</p>
                         </div>
-                        
                     </div>
-                    
-            </div></div>
+                </div></div>
             <div class="step"><h2 class="red">XML-Verarbeitung mit TUSCRIPT</h2>
                 <h3>READ/STREAM</h3>
                 <dfn class="small">Portionsweises Einlesen einer Datei. Eine Portion beginnt
@@ -177,11 +168,9 @@ DATA |" ;|</code></pre></div></div>
                 <pre><code>SELECT starttag
  CASE "persName"
    personid=GET_ATTRIBUTE (line,"ref","N.N."), personid=SQUEEZE(personid)
-
    --- Prüfen, ob GND-ID schon im Dictionary person (Personennamen) aufgenommen steht
    DICT person lookup personid,num,cnt,value1,value2
    IF (num!=0) CYCLE  
-
    --- Request bei Linked Data Schnittstelle der DNB
    IF (personid.ct." d-nb ") THEN
     persname="" 
@@ -189,7 +178,6 @@ DATA |" ;|</code></pre></div></div>
     content=REQUEST (url), content=DECODE (content,utf8)
     persname=EXTRACT (content,personanf|,personend)    
     persname=JOIN(persname,"")  
-
     --- GND-ID und Ansetzungsform eintragen in Dictonary
     DICT person add personid,num,cnt,persname,""
    ENDIF                
@@ -203,8 +191,6 @@ ENDSELECT</code></pre>
                 <pre><code>&lt;cstyle name="persName" style=s/&gt;</code></pre>
             </div>
             <div class="step">
-                <!--       <h3 class="red">W<a href="https://www.youtube.com/watch?v=dpWmlRNfLck"
-                        ><del>ar</del></a>|ord what is it good for – absolutely nothing!?</h3> -->
                 <h4>Quellen</h4>
                 <ul class="small">
                     <li> Marjam Mahmoodzada: Eine digitale Edition. Briefe von Jacoba van Heemskerck
