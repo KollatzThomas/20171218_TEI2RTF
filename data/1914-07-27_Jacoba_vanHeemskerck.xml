@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Eine digitale Edition: Jacoba van Heemskerck und Franz Marc an Herwarth Walden
+               1914-1915</title>
+            <editor>Marjam Mahmoodzada <email>mmahmood@students.uni-mainz.de</email>
+            </editor>
+         </titleStmt>
+         <!-- Template for a TEI XML file according to the Corrspondence Metadata Interchange (CMI) format <-->
+         <publicationStmt>
+            <publisher>
+               <ref target="mmahmood@students.uni-mainz.de">Marjam Mahmoodzada</ref>
+            </publisher>
+            <idno type="1914-07-27_Jacoba_vanHeemskerck.xml"
+               >1914-07-27_Jacoba_vanHeemskerck.xml</idno>
+            <date when="2017-06-12"/>
+            <availability>
+               <!-- The CC BY 4.0 license is mandatory -->
+               <licence target="https://creativecommons.org/licenses/by/4.0/">This file is licensed
+                  under the terms of the Creative-Commons-License CC BY 4.0</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>D</country>
+                  <settlement>Berlin</settlement>
+                  <repository>Staatsbibliothek zu Berlin Preußischer Kulturbesitz,
+                     Handschriftenabteilung, Sturm-Archiv I</repository>
+                  <idno type="URI">http://kalliope-verbund.info/DE-611-HS-1910556</idno>
+               </msIdentifier>
+            </msDesc>
+            <bibl type="hybrid">1914-07-27_Jacoba_vanHeemskerck.xml</bibl>
+         </sourceDesc>
+      </fileDesc>
+      <xenoData type="URL"
+         >http://digital.staatsbibliothek-berlin.de/metsresolver/PPN746594135</xenoData>
+      <profileDesc>
+         <correspDesc key="Bl.15" ref="1914-07-27_Jacoba_vanHeemskerck.xml">
+            <correspAction type="sent">
+               <persName ref="http://d-nb.info/gnd/11854764X">Jacoba van Heemskerck</persName>
+               <placeName>Loverendale, <placeName ref="http://sws.geonames.org/2756746"
+                     >Domburg</placeName></placeName>
+               <date when="1914-07-27"/>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="http://d-nb.info/gnd/118770950">Herwarth Walden</persName>
+               <placeName>Potsdamerstrasse 134a <placeName ref="http://sws.geonames.org/2950157"
+                     >Berlin</placeName> W.9.</placeName>
+            </correspAction>
+         </correspDesc>
+      </profileDesc>
+   </teiHeader>
+   <sourceDoc>
+      <graphic n="15r"
+         url="http://content.staatsbibliothek-berlin.de/dms/PPN746594135/800/0/00000001.jpg"/>
+      <graphic n="15v"
+         url="http://content.staatsbibliothek-berlin.de/dms/PPN746594135/800/0/00000002.jpg"/>
+      <graphic n="Farbkeil"
+         url="http://content.staatsbibliothek-berlin.de/dms/PPN746594135/800/0/00000003.jpg"/>
+   </sourceDoc>
+   <facsimile>
+      <graphic url="http://resolver.staatsbibliothek-berlin.de/SBB0000D94C00000000"/>
+   </facsimile>
+   <text type="postcard">
+      <body>
+         <pb n="15r" facs="http://resolver.staatsbibliothek-berlin.de/SBB0000D94C00000001"/>
+         <div>
+            <opener><dateline><date when="1914-07-27">27. Juli 1914</date>
+                  <placeName ref="http://sws.geonames.org/2756746"><hi rend="twice-underline"
+                        >Domburg.</hi></placeName></dateline>
+               <salute>G.<persName ref="http://d-nb.info/gnd/118770950"
+               >H.</persName></salute></opener>
+            <p>Viel Dank für Ihre Karten. Die mit <persName ref="http://d-nb.info/gnd/118559737"
+                  >Kandinsky</persName> hat mir viel Freude gemacht. Ich schreibe ihm eine Karte um
+               für die Beurteilung meiner Arbeiten zu danken. Diese Tagen viele Holzschnitten
+               gemacht <date when="1914-08">Anfang August</date> schicke ich Ihnen wie verabredet
+               Schwarze und farbige, und dann hoffentlich im <date when="1914-09">September</date>
+               wieder mehrere Es regnet hier jeden Tag. Hoffentlich kein Krieg. Viele deutsche
+               familien reisen ab.<note>Die sich zuspitzende Julikrise fand zur Urlaubszeit statt,
+                  während der sich zahlreiche Deutsche im Ausland aufhielten. Domburg ist ein
+                  beliebter Bade- und Kurort, wo sich - diesem Brief zufolge - unmittelbar vor
+                  Kriegsausbruch eine beträchtliche Anzahl deutscher Urlauber aufzuhalten schien.
+                  Zur Julikrise 1914 siehe weiterführend: Krumeich, Gerd: Julikrise. In:
+                  Enzyklopädie Erster Weltkrieg. Hrsg. v. u.a. Gerhard Hirschfeld. Paderborn [u.a.]
+                  2004, S. 601–602.</note></p>
+            <closer>Mit herzliche Grüssen für Sie beiden auch von Frl: <persName
+                  ref="http://d-nb.info/gnd/136128289">Tak</persName> und meine <persName ref="P005"
+                  >Schwester</persName>
+               <salute>Ihre <persName ref="http://d-nb.info/gnd/11854764X">Jacoc<hi rend="underline"
+                        >avHeemske</hi>rck</persName></salute></closer>
+         </div></body></text>
+</TEI>
